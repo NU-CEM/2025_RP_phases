@@ -1,6 +1,6 @@
 import os 
 import numpy as np
-from ase.io import read
+from ase.io import read, write
 from calorine.calculators import CPUNEP
 from calorine.tools import get_force_constants, relax_structure
 from matplotlib import pyplot as plt
@@ -35,10 +35,11 @@ for i in range(1,9):
         space_group.append(symm.no)
         symbol.append(spglib.get_spacegroup(atoms,symprec=0.0000001))
         energy.append(structure.get_potential_energy()/structure.get_global_number_of_atoms())
+        write(f'sym_relax_{mater}', structure, format = 'aims') 
      res = list(zip(space_group,symbol,energy))
      print(res) 
      sg = min(res, key=lambda p:p[2])[1]
      E = min(res, key=lambda p:p[2])[2]
      print(i, sg , E)
      for j in res:
-        print(j[1], E - j[2])
+        print(j[1], j[2] - E)
