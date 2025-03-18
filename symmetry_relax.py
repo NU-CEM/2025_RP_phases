@@ -21,7 +21,7 @@ phonons = ['000_000' ,'00Mz_00Mz' ,'00Mz_000' ,'00Mz1_00Mz2' ,'00Rz_00Rz' ,'00Rz
 materials = next(os.walk('.'))[2]
 count = 1
 
-for i in range(1,9):
+for i in range(7,11):
      space_group = []
      symbol = []
      energy = []
