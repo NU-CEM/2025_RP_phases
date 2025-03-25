@@ -21,15 +21,15 @@ phonons = ['000_000' ,'00Mz_00Mz' ,'00Mz_000' ,'00Mz1_00Mz2' ,'00Rz_00Rz' ,'00Rz
 materials = next(os.walk('.'))[2]
 count = 1
 
-for i in range(1,7):
+for i in range(7,10):
      space_group = []
      symbol = []
      energy = []
      phonon_mode = []
     
      for phonon in phonons:
-          structure = read(f'RP_{i}_{phonon}.in', format = 'aims')
-          atoms = read(f'RP_{i}_{phonon}.in', format = 'aims')
+          structure = read(f'aims_geometry/RP_{i}_{phonon}.in', format = 'aims')
+          atoms = read(f'aims_geometry/RP_{i}_{phonon}.in', format = 'aims')
           calc = CPUNEP('nep.txt')
           structure.calc = calc
           ucf = UnitCellFilter(structure)
