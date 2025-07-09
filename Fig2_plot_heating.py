@@ -13,11 +13,12 @@ import pandas as pd
 import os 
 import mplpub
 mplpub.setup(template='acs')
-
+import matplotlib as mpl
+mpl.rcParams['ytick.labelsize'] = 9
+mpl.rcParams['xtick.labelsize'] = 9
 
 # parameters
-n_vals = [1, 2, 3, 4, 5, 6, 7, 8]
-n_vals = [1, 2, 3, 4, 5, 6]
+n_vals = [1, 2, 4, 5, 6, 3]
 
 # plot setup
 xlim = [0, 1000]
@@ -34,10 +35,10 @@ count = 0
 files = ['1','2','3','4','5','6', 'inf']
 for i in files:
     if i == 'inf':
-        df = read_thermo(f'data/n{i}_thermo.out')
+        df = read_thermo(f'/Users/prakriti/2025_RP_phases_data/n{i}_thermo.out')
         atoms = read(f'data/n{i}_model.xyz')
     else:
-        df = read_thermo(f'data/n{i}_thermo.out')
+        df = read_thermo(f'/Users/prakriti/2025_RP_phases_data/n{i}_thermo.out')
         atoms = read(f'data/n{i}_model.xyz')
     k_B = constants.physical_constants["Boltzmann constant in eV/K"][0]
     if i == 'inf':
@@ -94,7 +95,7 @@ for i in files:
     energy = df['potential_energy']
     
     ax = axes[0]
-    ax.text(-0.15, 1, 'a)', transform=ax.transAxes, fontsize = 8)
+    ax.text(-0.20, 1, 'a)', transform=ax.transAxes, fontsize = 10)
     if i == 'inf':
         #ax.plot(df['temperature'],a/np.sqrt(2), label = r'perov a', color = 'k')
         #ax.plot(df['temperature'],b/2, label = r'perov b', color = 'red')
@@ -102,19 +103,34 @@ for i in files:
     else:
         ax.plot(df['temperature'],a, color = colors[count], label = f'$n={i}$')
     ax.set_ylim([4.95,5.1])
-    ax.legend(frameon=True,facecolor='white')
-    ax.set_ylabel(r'Lattice parameter (\AA)')
+    ax.legend(frameon=True,facecolor='white', fontsize = 8)
+    ax.set_ylabel(r'Lattice parameter (\AA)', fontsize = 10)
     ax = axes[2]
     if i == 'inf':
         data = np.load(f'data/heat_capacity_data_perovskite.npy', allow_pickle=True).item()
-        ax.plot(data['temperature_fit'], data['heatcapacity_fit'], '-', color='k', label=f'')
-    else:
+        ax.plot(data['temperature_fit'], data['heatcapacity_fit'], '-', color='k', label=f'', zorder = 6)
+    elif i == '1':
         data = np.load(f'data/heat_capacity_data_RP_n{i}.npy', allow_pickle=True).item()
-        ax.plot(data['temperature_fit'], data['heatcapacity_fit'], '-', color=colors[count], label=f'RP n{n}')
+        ax.plot(data['temperature_fit'], data['heatcapacity_fit'], '-', color=colors[0], label=f'RP n{n}', zorder = 1)
+    elif i == '2':
+        data = np.load(f'data/heat_capacity_data_RP_n{i}.npy', allow_pickle=True).item()
+        ax.plot(data['temperature_fit'], data['heatcapacity_fit'], '-', color=colors[1], label=f'RP n{n}', zorder = 2)
+    elif i == '3':
+        data = np.load(f'data/heat_capacity_data_RP_n{i}.npy', allow_pickle=True).item()
+        ax.plot(data['temperature_fit'], data['heatcapacity_fit'], '-', color=colors[2], label=f'RP n{n}', zorder = 7)
+    elif i == '4':
+        data = np.load(f'data/heat_capacity_data_RP_n{i}.npy', allow_pickle=True).item()
+        ax.plot(data['temperature_fit'], data['heatcapacity_fit'], '-', color=colors[3], label=f'RP n{n}', zorder = 3)
+    elif i == '5':
+        data = np.load(f'data/heat_capacity_data_RP_n{i}.npy', allow_pickle=True).item()
+        ax.plot(data['temperature_fit'], data['heatcapacity_fit'], '-', color=colors[4], label=f'RP n{n}', zorder = 4)
+    elif i == '6':
+        data = np.load(f'data/heat_capacity_data_RP_n{i}.npy', allow_pickle=True).item()
+        ax.plot(data['temperature_fit'], data['heatcapacity_fit'], '-', color=colors[5], label=f'RP n{n}', zorder = 5)
     ax.set_ylim([0.95,2])
-    ax.set_ylabel(r'Heat capacity (k$_B$)')
-    ax.set_xlabel('Temperature (K)')
-    ax.text(-0.15, 1, 'c)', transform=ax.transAxes, fontsize = 8)
+    ax.set_ylabel(r'Heat capacity (k$_B$)', fontsize = 10)
+    ax.set_xlabel('Temperature (K)', fontsize = 10)
+    ax.text(-0.20, 1, 'c)', transform=ax.transAxes, fontsize = 10)
     ax = axes[1]
     if i == 'inf':
         ax.plot(df['temperature'],df['potential_energy']*100, label = r'\infty', color = 'k')
@@ -123,11 +139,13 @@ for i in files:
     else:
         ax.plot(df['temperature'],df['potential_energy']*100, color = colors[count])
       
-    ax.set_ylabel('Energy (meV/atom)')
-    ax.set_xlabel('Temperature (K)')
-    ax.text(-0.15, 1, 'b)', transform=ax.transAxes, fontsize = 8)
+    ax.set_ylabel('Energy (meV/atom)', fontsize = 10)
+    ax.set_xlabel('Temperature (K)', fontsize=10)
+    ax.text(-0.20, 1, 'b)', transform=ax.transAxes, fontsize = 10)
+    ax.set_ylim([-0.12,1.62])
     #ax.legend()
     count = count + 1
+#plt.tick_params(labelsize = 10)
 plt.xlim([0,1000])
 plt.tight_layout()
 plt.subplots_adjust(hspace=0)
