@@ -1,0 +1,8 @@
+- `phonons` - contains plotting data with DFT evaluated phonopy outputs and primitive unit cells for n=1 to n=3 RP 
+- `EntryWithCollCode80651.csv` - Vesta generated XRD pattern for the n=1 RP phase using the ICSD structure 80651 (Saeki et al 1991)
+- `RP_1*_modified.csv` -  Vesta generated XRD pattern for the n=1 RP phase using the experimental lattice paramaters for the different phases
+- `RP_n*_Asite_z_displacements.csv` -  A site displcements in for n=1 to n=6 RP phases 
+- `exp_n*.csv` - Vesta generated XRD pattern for n=1 and n=2 RP phase using data from Niu et al 2019
+- `heat_capacity_data_*.npy` - polynomial fitted heat capacity data for the RP series 
+- `modes_RP_*.csv` -  mode projection data from heating and cooling runs in the n=1 to n=8 RP phases
+- `n*_model.xyz` - supercells used for performing heating runs for the RP series
