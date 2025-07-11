@@ -2,7 +2,7 @@
 
 This repository contains the data and Python code required to reproduce plots in the paper [Diverse polymorphism in Ruddelsden-Popper chalcogenides]():
 
- - `Fig_xxx.py` or `Fig_xxx.ipynb`: Code to plot the figures in the main text.
+ - `FigX_xxx.py` or `FigX_xxx.ipynb`: Code to plot the figures in the main text.
  - `data`: Data for plotting, please see the additional README in the sub-folder.
  - `figs`: Figures which are produced
  - `model`: MLIP (specifically [NEPs](https://gpumd.org/index.html)) trained using the HSE06 functional.
