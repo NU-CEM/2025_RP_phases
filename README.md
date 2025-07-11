@@ -6,7 +6,7 @@ This repository contains the data and Python code required to reproduce plots in
  - `data`: Data for plotting, please see the additional README in the sub-folder.
  - `figs`: Figures which are produced
  - `model`: MLIP (specifically [NEP](https://gpumd.org/index.html)) trained using the HSE06 functional.
- - `tilt_structures`: NEP-relaxed of the RP phases with the 33 unique tilts defined by Aleksandrov, collected in the FHI-aims `geometry.in` format.
+ - `tilt_structures`: Unrelaxed RP phases with the 33 unique tilt patterns defined by Aleksandrov applied, collected in the FHI-aims `geometry.in` format.
  - `ground_states`: NEP-relaxed ground state structures for the n=1 to 6 RP phases, collected in the FHI-aims `geometry.in` format.
  - `SI_fig_xxx.py` or `SI_fig_xxx.ipynb`: Additional python scripts and Jupyter notebooks to plot figures in the supplementary information.
 
