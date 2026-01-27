@@ -31,6 +31,7 @@ cmap = 'Blues'
 
 for i in range(1,13):
     # read data
+    ## Note: these are layer-by-layer xyz trajectory files from the heating runs. These are too large to upload somewhere. Please contact us if you need this file to reproduce this work/for your own research. 
     dump_fname = f'text_{i}.extxyz'
     print('reading traj')
     traj = read(dump_fname, index=':')
