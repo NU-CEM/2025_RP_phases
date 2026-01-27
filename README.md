@@ -1,4 +1,4 @@
-### Repository for `Diverse polymorphism in Ruddelsden-Popper chalcogenides`
+### Repository for `Diverse Polymorphism in Ruddelsden-Popper Chalcogenides`
 
 This repository contains the data and Python code required to reproduce plots in the paper [Diverse polymorphism in Ruddelsden-Popper chalcogenides]():
 
