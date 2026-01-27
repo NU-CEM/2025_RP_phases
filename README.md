@@ -10,6 +10,8 @@ This repository contains the data and Python code required to reproduce plots in
  - `ground_states`: NEP-relaxed ground state structures for the n=1 to 6 RP phases, collected in the FHI-aims `geometry.in` format.
  - `SI_fig_xxx.py` or `SI_fig_xxx.ipynb`: Additional python scripts and Jupyter notebooks to plot figures in the supplementary information.
 
+The `n*_thermo.out` for figure plotting, NEP model, and training set data are collected in [here](https://doi.org/10.5281/zenodo.17539815) and [here](https://doi.org/10.5281/zenodo.17539815)
+
 Software versions used to run the above scripts/notebooks:
 
 - [ase](https://wiki.fysik.dtu.dk/ase/)       3.22.1
