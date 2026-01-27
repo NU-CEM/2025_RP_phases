@@ -35,6 +35,7 @@ count = 0
 files = ['1','2','3','4','5','6', 'inf']
 for i in files:
     if i == 'inf':
+        ## note that the data for n*_thermo.out files can be found here: https://doi.org/10.5281/zenodo.18386067. Please download these before running the script. 
         df = read_thermo(f'/Users/prakriti/2025_RP_phases_data/n{i}_thermo.out')
         atoms = read(f'data/n{i}_model.xyz')
     else:
