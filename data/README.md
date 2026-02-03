@@ -1,4 +1,4 @@
-- `phonons` - contains plotting data with DFT evaluated phonopy outputs and primitive unit cells for n=1 to n=3 RP 
+- `phonons` - contains DFT evaluated phonopy outputs and primitive unit cells for the n=1 to n=3 RP phases.
 - `EntryWithCollCode80651.csv` - Vesta generated XRD pattern for the n=1 RP phase using the ICSD structure 80651 (Saeki et al 1991)
 - `RP_1*_modified.csv` -  Vesta generated XRD pattern for the n=1 RP phase using the experimental lattice paramaters for the different phases
 - `RP_n*_Asite_z_displacements.csv` -  A site displcements in for n=1 to n=6 RP phases 
