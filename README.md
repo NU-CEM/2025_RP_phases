@@ -21,6 +21,7 @@ Software versions used to run the above scripts/notebooks:
 - [hiphive](https://hiphive.materialsmodeling.org/)   1.3.1
 - [calorine](https://calorine.materialsmodeling.org/)  2.2.1
 - [GPUMD](https://gpumd.org/)     3.9.5
+- [mplpub](https://gitlab.com/materials-modeling/mplpub) 1.1
 
-To install via conda, navigate into the repository root folder adn run the following terminal command: `conda env create -f environment.yml`
+To install via conda, navigate into the repository root folder adn run the following terminal command: `conda env create -f environment.yml`. C++ code has to be compiled as part of the `Calorine` installation, which requires a C++11 compliant compiler to be installed on your system (e.g. via [XCode Command Line Tools](https://developer.apple.com/documentation/xcode/installing-the-command-line-tools/) on Mac)
 
