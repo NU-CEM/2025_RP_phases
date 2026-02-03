@@ -1,1 +1,1 @@
-NEP-relaxed, kinetically stable structures for the n=1 to 6 RP phases.
+Unrelaxed RP phases with the 33 unique tilt patterns defined by Aleksandrov.
