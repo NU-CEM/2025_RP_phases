@@ -11,8 +11,6 @@ This repository contains the data and Python code required to reproduce plots in
  - `ground_states`: NEP-relaxed ground state structures for the n=1 to 6 RP phases, collected in the FHI-aims `geometry.in` format.
  - `SI_fig_xxx.py` or `SI_fig_xxx.ipynb`: Additional python scripts and Jupyter notebooks to plot figures in the supplementary information.
 
-
-
 Software versions used to run the above scripts/notebooks:
 
 - [ase](https://wiki.fysik.dtu.dk/ase/)       3.22.1
@@ -21,5 +19,6 @@ Software versions used to run the above scripts/notebooks:
 - [hiphive](https://hiphive.materialsmodeling.org/)   1.3.1
 - [calorine](https://calorine.materialsmodeling.org/)  2.3.1
 - [GPUMD](https://gpumd.org/)     3.9.5
-- [mplpub](https://gitlab.com/materials-modeling/mplpub) 1.1
+
+To install via conda, navigate into the repository root folder adn run the following terminal command: `conda env create -f environment.yml`
 
