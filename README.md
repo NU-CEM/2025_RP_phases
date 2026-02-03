@@ -17,7 +17,7 @@ Software versions used to run the above scripts/notebooks:
 - [phonopy](https://phonopy.github.io/phonopy)   2.21.0
 - [spglib](https://spglib.readthedocs.io/en/stable/)    2.2.0
 - [hiphive](https://hiphive.materialsmodeling.org/)   1.3.1
-- [calorine](https://calorine.materialsmodeling.org/)  2.3.1
+- [calorine](https://calorine.materialsmodeling.org/)  2.2.1
 - [GPUMD](https://gpumd.org/)     3.9.5
 
 To install via conda, navigate into the repository root folder adn run the following terminal command: `conda env create -f environment.yml`
