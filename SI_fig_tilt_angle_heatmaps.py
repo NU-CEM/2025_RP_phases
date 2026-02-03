@@ -1,8 +1,6 @@
 from ase.io import read
 import numpy as np
 import matplotlib.pyplot as plt
-import mplpub
-
 
 # parameters
 n = 1

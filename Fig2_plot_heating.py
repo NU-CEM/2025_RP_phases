@@ -1,19 +1,11 @@
-import numpy as np
-import matplotlib.pyplot as plt
-import mplpub
-mplpub.setup()
-
 from calorine.gpumd import read_thermo
 from dynasor.tools.acfs import smoothing_function
-import matplotlib.pyplot as plt
 import numpy as np
 from scipy import constants
 from ase.io import read
-import pandas as pd 
-import os 
+import matplotlib as mpl
 import mplpub
 mplpub.setup(template='acs')
-import matplotlib as mpl
 mpl.rcParams['ytick.labelsize'] = 9
 mpl.rcParams['xtick.labelsize'] = 9
 
