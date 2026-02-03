@@ -1,0 +1,1 @@
+Relaxed structures for kinetically stable RP phases, collected in the FHI-aims `geometry.in` format. They are generated with `construct_Aleksandrov_RP.ipynb` and `BaZrS3_cubic_2x2x2_with_modes.extxyz`.
